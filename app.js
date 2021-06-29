@@ -15,7 +15,3 @@ app.listen(8000, () => {
     console.log('Server started!')})
 
 
-    // test_endpoint
-app.get('/', (req,res)=>{
- res.status(200).json("done..")})
-
