@@ -25,7 +25,7 @@ app.listen(8000, () => {
 // update an existing category in the database
 app.put('/api/Category:id', async (req, res) => {
     let sql = "UPDATE categories SET category_name=?,category_description=? WHERE id=?  "
-    let [result,row] = await db.connection.execute(sql,[req.body.category_name,req.body.category_description,req.params.id])
+    await db.connection.execute(sql,[req.body.category_name,req.body.category_description,req.params.id])
     res.status(200).json("..")
 })
 //get list of categories
